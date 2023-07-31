@@ -1,0 +1,59 @@
+LOG-INFO : Inside onStart function
+LOG:INFO - Browser is launched
+LOG-INFO : Inside onTestStart function.TestCase Name -CreateCustomers
+Log-INFO : Start of TC1_CreateCustomer Execution-
+Log-DONE : Step1-Successfully logged in to application
+Log-DONE : Step2-Add New Customer page appears
+Log-INFO : Adding a new customer with CustomerName - Dhoni
+Alert did not appear
+Log-DONE : Step3-Customer ID is90441
+Log-INFO : Adding a new customer with CustomerName - Kohli
+Alert did not appear
+Log-DONE : Step3-Customer ID is3025
+Log-INFO : Adding a new customer with CustomerName - Kaur
+Alert did not appear
+Log-DONE : Step3-Customer ID is81557
+Log-INFO : End of Writing the excel
+Log-INFO : End of Writing the excel
+Log-INFO : End of Writing the excel
+Log-INFO : -End of TC1_CreateCustomer execution
+LOG-INFO : Inside onTestSuccess function.TestCase Name -CreateCustomers
+LOG:INFO - Closing Browser
+LOG:INFO - Browser is launched
+LOG-INFO : Inside onTestStart function.TestCase Name -EditCustomers
+Log-INFO : Start of TC2_EditCustomer execution-
+Log-DONE : Step1-Successfully logged in to application
+Log-DONE : Step2-Successfully navigated to EditCustomer page
+Alert appeared.Alert Text - No Changes made to Customer records
+Log-INFO : Step3-Successfully updated details for customer with ID - 90441
+Alert appeared.Alert Text - No Changes made to Customer records
+Log-INFO : Step3-Successfully updated details for customer with ID - 3025
+Alert appeared.Alert Text - No Changes made to Customer records
+Log-INFO : Step3-Successfully updated details for customer with ID - 81557
+Log-INFO : End of TC2_EditCustomer execution-
+LOG-INFO : Inside onTestSuccess function.TestCase Name -EditCustomers
+LOG:INFO - Closing Browser
+LOG:INFO - Browser is launched
+LOG-INFO : Inside onTestStart function.TestCase Name -DeleteCstomer
+Log-INFO : Start of TC3_DeleteCustomer execution-
+Log-DONE : Step1-Successfully logged in to application
+Log-DONE : Step2-Successfully navigated to DeleteCustomer page
+1st Alert appeared.Alert Text - Do you really want to delete this Customer?
+2nd Alert appeared.Alert Text - Customer does not Exist!!!
+Log-INFO : Step3-Successfully deleted the customer with ID - 90441
+1st Alert appeared.Alert Text - Do you really want to delete this Customer?
+2nd Alert appeared.Alert Text - Customer does not Exist!!!
+Log-INFO : Step3-Successfully deleted the customer with ID - 3025
+1st Alert appeared.Alert Text - Do you really want to delete this Customer?
+2nd Alert appeared.Alert Text - Customer does not Exist!!!
+Log-INFO : Step3-Successfully deleted the customer with ID - 81557
+Log-INFO : End of TC3_DeleteCustomer execution-
+LOG-INFO : Inside onTestSuccess function.TestCase Name -DeleteCstomer
+LOG:INFO - Closing Browser
+LOG-INFO : Inside onFinish function
+
+===============================================
+Suite
+Total tests run: 3, Passes: 3, Failures: 0, Skips: 0
+===============================================
+

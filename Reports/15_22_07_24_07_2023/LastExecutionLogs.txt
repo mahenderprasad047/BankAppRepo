@@ -1,0 +1,35 @@
+LOG-INFO : Inside onStart function
+LOG:INFO - Browser is launched
+LOG-INFO : Inside onTestStart function.TestCase Name -CreateCustomers
+Log-INFO : Start of TC1_CreateCustomer Execution-
+LOG-INFO : Inside onTestFailure function.TestCase Name -CreateCustomers
+LOG:INFO - Closing Browser
+LOG:INFO - Browser is launched
+LOG-INFO : Inside onTestStart function.TestCase Name -EditCustomers
+Log-INFO : Start of TC2_EditCustomer execution-
+LOG-INFO : Inside onTestFailure function.TestCase Name -EditCustomers
+LOG:INFO - Closing Browser
+LOG:INFO - Browser is launched
+LOG-INFO : Inside onTestStart function.TestCase Name -DeleteCstomer
+Log-INFO : Start of TC3_DeleteCustomer execution-
+Log-DONE : Step1-Successfully logged in to applicationScreenshot - 15_22_48
+Log-DONE : Step2-Successfully navigated to DeleteCustomer pageScreenshot - 15_22_49
+1st Alert appeared.Alert Text - Do you really want to delete this Customer?
+2nd Alert appeared.Alert Text - Customer does not Exist!!!
+Log-INFO : Step3-Successfully deleted the customer with ID - 51026
+1st Alert appeared.Alert Text - Do you really want to delete this Customer?
+2nd Alert appeared.Alert Text - Customer does not Exist!!!
+Log-INFO : Step3-Successfully deleted the customer with ID - 67289
+1st Alert appeared.Alert Text - Do you really want to delete this Customer?
+2nd Alert appeared.Alert Text - Customer does not Exist!!!
+Log-INFO : Step3-Successfully deleted the customer with ID - 39392
+Log-INFO : End of TC3_DeleteCustomer execution-
+LOG-INFO : Inside onTestSuccess function.TestCase Name -DeleteCstomer
+LOG:INFO - Closing Browser
+LOG-INFO : Inside onFinish function
+
+===============================================
+Suite
+Total tests run: 3, Passes: 1, Failures: 2, Skips: 0
+===============================================
+
