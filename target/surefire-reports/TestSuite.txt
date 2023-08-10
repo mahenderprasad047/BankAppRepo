@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 72.41 s <<< FAILURE! - in TestSuite
+TestCases.TC1_CreateCustomer.CreateCustomers  Time elapsed: 1.013 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=114.0.5735.248)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_361'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d448498ecab3b96dd0dfe2f70418058a, clickElement {id=91FFFC8682874A7782AB4EA9B2171A41_element_46}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.248, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:62811}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62811/devtoo..., se:cdpVersion: 114.0.5735.248, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d448498ecab3b96dd0dfe2f70418058a)] -> xpath: //input[@name='btnLogin']]
+Session ID: d448498ecab3b96dd0dfe2f70418058a
+	at TestCases.TC1_CreateCustomer.CreateCustomers(TC1_CreateCustomer.java:45)
+
+TestCases.TC2_EditCustomer.EditCustomers  Time elapsed: 7.807 s  <<< FAILURE!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Customer does not exist!!}
+  (Session info: chrome=114.0.5735.248): Customer does not exist!!
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_361'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9c48e2fb1a60fbe20fa42450fff6337, findElement {using=xpath, value=//textarea[@name='addr']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.248, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:62881}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62881/devtoo..., se:cdpVersion: 114.0.5735.248, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9c48e2fb1a60fbe20fa42450fff6337
+	at TestCases.TC2_EditCustomer.EditCustomers(TC2_EditCustomer.java:54)
+
