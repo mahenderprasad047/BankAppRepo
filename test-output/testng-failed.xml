@@ -4,8 +4,8 @@
   <listeners>
     <listener class-name="GenericUtilities.ExtentTestNGITestListener"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="EdgeTest(failed)">
-    <parameter name="browserName" value="edge"/>
+  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
+    <parameter name="browserName" value="chrome"/>
     <classes>
       <class name="TestCases.TC1_CreateCustomer">
         <methods>
@@ -16,5 +16,5 @@
         </methods>
       </class> <!-- TestCases.TC1_CreateCustomer -->
     </classes>
-  </test> <!-- EdgeTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [AutomationExecution] -->

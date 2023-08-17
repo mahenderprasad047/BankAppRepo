@@ -99,7 +99,7 @@ public class BrowserUtilities
 			//opt.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking"));
 			//opt.addExtensions(new File("./Extensions/AdBlocker.crx"));
 			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setBrowserName("chrome");
+			cap.setBrowserName("firefox");
 			cap.merge(opt);
 			driver = new FirefoxDriver(opt);
 			driver.manage().window().maximize();
