@@ -90,7 +90,7 @@ public class TestDataProviderForTC
 		 return data;
 	}
 	
-	public static void SetDataToAColumnOfExcel(String TCName, String excelName, String sheetName, List<String> lst,String columnName) 
+	public static synchronized void SetDataToAColumnOfExcel(String TCName, String excelName, String sheetName, List<String> lst,String columnName) 
 	{	
 		FileInputStream file = null;
 		

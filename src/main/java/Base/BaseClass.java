@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import GenericUtilities.BrowserUtilities;
 import GenericUtilities.Common;
@@ -25,20 +26,23 @@ public class BaseClass
 	}
 	
 	@BeforeClass
-	public void LaunchApplication() throws InterruptedException, MalformedURLException 
+	@Parameters("browserName")
+	public void LaunchApplication(String browserName) throws InterruptedException, MalformedURLException 
 	{
+		System.out.println("Bowser Name from Parameter Value - "+ browserName);
 		//System.out.println("LOG:INFO - Launching Application");
-		String sBrowser = ConfigReaderUtility.GetConfigProperty("Browser");
+		String sBrowser = browserName;	//ConfigReaderUtility.GetConfigProperty("Browser");
 		String sURL = ConfigReaderUtility.GetConfigProperty("ApplicationURL");
 		
-		driver = BrowserUtilities.startBrowser(sBrowser, sURL);
+		BrowserUtilities browser = new BrowserUtilities();
+		driver = browser.startBrowser(sBrowser, sURL);
 		System.out.println("LOG:INFO - Browser is launched");
 	}
 	
 	@AfterClass
 	public void CloseApplication()
 	{
-		driver.quit();
+		getDriver().quit();
 		System.out.println("LOG:INFO - Closing Browser");
 	}
 	

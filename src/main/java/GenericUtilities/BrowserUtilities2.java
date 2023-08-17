@@ -19,7 +19,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BrowserUtilities 
+public class BrowserUtilities2 
 {
 	
 	ThreadLocal<WebDriver> tl=new ThreadLocal<>();
@@ -48,10 +48,10 @@ public class BrowserUtilities
 			tl.set(driver);
 			//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
 			
-			getDriver().manage().window().maximize();
-			getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));	//For Browser to load
-			getDriver().manage().deleteAllCookies();
-			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	//For every WebElement
+			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));	//For Browser to load
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	//For every WebElement
 			
 			Thread.sleep(4000);
 			Set<String> s=driver.getWindowHandles();
@@ -59,10 +59,10 @@ public class BrowserUtilities
 			while(I1.hasNext())
 			{
 				String child_window=I1.next();
-				getDriver().switchTo().window(child_window);
+				driver.switchTo().window(child_window);
 				System.out.println("Title - " + driver.switchTo().window(child_window).getTitle());
 			}
-			getDriver().get(url);
+			driver.get(url);
 			
 			
 		}
@@ -71,33 +71,32 @@ public class BrowserUtilities
 			WebDriverManager.edgedriver().setup();
 			EdgeOptions opt = new EdgeOptions();
 			//opt.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking"));
-			opt.addExtensions(new File("./Extensions/AdBlocker.crx"));
+			//opt.addExtensions(new File("./Extensions/AdBlocker.crx"));
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setBrowserName("edge");
 			cap.merge(opt);
 			driver = new EdgeDriver(opt);
-			tl.set(driver);
 			//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
-			getDriver().manage().window().maximize();
-			getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));	//For Browser to load
-			getDriver().manage().deleteAllCookies();
-			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	//For every WebElement
+			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));	//For Browser to load
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	//For every WebElement
 			Thread.sleep(4000);
 			Set<String> s=driver.getWindowHandles();
 			Iterator<String> I1= s.iterator();
 			while(I1.hasNext())
 			{
 				String child_window=I1.next();
-				getDriver().switchTo().window(child_window);
+				driver.switchTo().window(child_window);
 				System.out.println("Title - " + driver.switchTo().window(child_window).getTitle());
 			}
-			getDriver().get(url);
+			driver.get(url);
 		}
 		else if(browserName.equalsIgnoreCase("Firefox"))
 		{
 			FirefoxOptions opt = new FirefoxOptions();
 			//opt.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking"));
-			//opt.addExtensions(new File("./Extensions/AdBlocker.crx"));
+			opt.addExtensions(new File("./Extensions/AdBlocker.crx"));
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setBrowserName("chrome");
 			cap.merge(opt);
@@ -126,7 +125,6 @@ public class BrowserUtilities
 		System.out.println("Application launched");
 		return driver;		
 	}
-	
 	
 	public void CloseBrowser(WebDriver driver)
 	{

@@ -9,6 +9,7 @@ import java.util.Map;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Base.BaseClass;
@@ -29,7 +30,7 @@ public class TC1_CreateCustomer extends BaseClass
 		driver = getDriver();
 	}
 	
-	@Test	
+	@Test
 	public void CreateCustomers() throws InterruptedException 
 	{
 		Reporter.LogEvent(driver, "Info", "Start of TC1_CreateCustomer Execution", "");

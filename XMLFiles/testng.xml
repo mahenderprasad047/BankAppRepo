@@ -8,8 +8,6 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="TestCases.TC1_CreateCustomer"/>
-      <class name="TestCases.TC2_EditCustomer"/>
-      <class name="TestCases.TC3_DeleteCustomer"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
